@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <!-- Title Page -->
+    <title>formulario</title>
+
+    <!-- CSS -->
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Poppins:400,500,600,700" rel="stylesheet">
+    <link rel="stylesheet" href="static/css/fol.css">
+    <link rel="stylesheet" type="text/css" href="static/css/plugins.css">
+
+</head>
+<body style="overflow: scroll;">
+   <div class="container">
+        <div class="form-container">
+            <header class="header">
+                <h1 class="title">Formulario de factura</h1>
+            </header>
+            <form action="" class="form">
+                <h2 class="form-title">Datos del cliente</h2>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="firstName">Nombre</label>
+                        <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Nombre" required>
+                        <small id="nameValidateText" class="form-text text-muted validate-text">El nombre debe constar solo de caracteres del alfabeto</small>
+                    </div>
+                    <div class="form-group col">
+                        <label for="lastName">Apellido</label>
+                        <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Apellido" required>
+                        <small id="surnameValidateText" class="form-text text-muted validate-text">El apellido debe constar solo de caracteres del alfabeto</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="clientAdress">Dirección</label>
+                        <input type="text" class="form-control" id="clientAdress" name="clientAdress" placeholder="Dirección" required>
+                        <small id="adressValidateText" class="form-text text-muted validate-text">La dirección debe contener caracteres del alfabeto y números.</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="clientCity">Ciudad</label>
+                        <input type="text" class="form-control" id="clientCity" name="clientCity" placeholder="Ciudad" required>
+                        <small id="clientCityValidateText" class="form-text text-muted validate-text">La ciudad debe contener solo caracteres del alfabeto.</small>
+                    </div>
+                    <div class="form-group col">
+                        <label for="clientPostCode">Código postal</label>
+                        <input type="text" class="form-control" id="clientPostCode" name="clientPostCode" placeholder="Código postal" required>
+                        <small id="clientPostCodeValidateText" class="form-text text-muted validate-text">Complete el campo del código postal con el formato: xx-xxx</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="clientMail">Dirección de correo electrónico</label>
+                        <input type="email" class="form-control" id="clientMail" name="clientMail" placeholder="Ingrese correo electrónico" required>
+                        <small id="emailValidateText" class="form-text text-muted validate-text"> Una dirección de correo electrónico debe contener una @ </small>
+                    </div>
+                </div>
+                <h2 class="form-title">Detalles de la compañía</h2>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="companyName">Nombre de empresa</label>
+                        <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Nombre de empresa" required>
+                        <small id="companyNameValidateText" class="form-text text-muted validate-text">Por favor complete esta entrada</small>
+                    </div>
+                    <div class="form-group col">
+                        <label for="nipNumber">Numero Nip</label>
+                        <input type="text" class="form-control" id="nipNumber" name="nipNumber" placeholder="Numero Nip" required>
+                        <small id="nipValidateText" class="form-text text-muted validate-text">Complete el campo del número NIP con el formato: xxx-xxx-xx-xx</small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="copmanyAdress">Dirección</label>
+                        <input type="text" class="form-control" id="companyAdress" name="companyAdress" placeholder="Dirección" required>
+                        <small id="companyAdressValidateText" class="form-text text-muted validate-text">La dirección debe contener caracteres del alfabeto y números. </small>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="companyCity">Ciudad</label>
+                        <input type="text" class="form-control" id="companyCity" name="companyCity" placeholder="Ciudad" required>
+                        <small id="compnayCityValidateText" class="form-text text-muted validate-text">La ciudad debe contener solo caracteres del alfabeto.</small>
+                    </div>
+                    <div class="form-group col">
+                        <label for="companyPostCode">Código postal</label>
+                        <input type="text" class="form-control" id="companyPostCode" name="companyPostCode" placeholder="Código postal" required>
+                        <small id="companyPostCodeValidateText" class="form-text text-muted validate-text">Complete el campo del código postal con el formato: xx-xxx</small>
+                    </div>
+                </div>
+                <h2 class="form-title">Detalles de la factura</h2>
+                <div class="row">
+                    <div class="form-group col">
+                        <label for="price">Precio</label>
+                        <input type="number" class="form-control" id="price" name="price" placeholder="Precio" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <legend class="col-form-label">Estado</legend>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions" id="generated" value="Generated">
+                            <label class="form-check-label" for="generated">Generado</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions" id="Sent" value="Sent">
+                            <label class="form-check-label" for="Sent">Expedido</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions" id="Paid" value="Paid">
+                            <label class="form-check-label" for="Paid">Pagado</label>
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions" id="overdue" value="Overdue">
+                            <label class="form-check-label" for="overdue">Atrasado</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col text-center">
+                        <button type="submit" class="btn btn-warning btn-lg submit-button">Enviar</button>
+                    </div>
+                </div>
+            </form>
+            <div class="row">
+                <div class="col">
+                    <p class="saveData">Última modificación: nunca</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

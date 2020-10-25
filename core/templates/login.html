@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>login</title>
+    <link rel="stylesheet" href="static/css/css.css">
+</head>
+<body>
+<div class="login">
+	<h1>Iniciar sesión</h1>
+    <form method="post">
+        {% csrf_token %}
+    	<input type="text" name="u" placeholder="Nombre de usuario" required="required" />
+        <input type="password" name="p" placeholder="Contraseña" required="required" />
+        <a class="nav-link" href="{% url 'dark1' %}" style="    position: absolute;color: white;">_______</a>
+        <button href="{% url 'dark1' %}"> iniciar sesion </button>
+    </form>
+</div>
+</body>
+</html>
